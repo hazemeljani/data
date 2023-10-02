@@ -1,0 +1,45 @@
+ALGORITHM algorithm_elements
+VAR
+      set1: array[1..100] of integer;
+  set2: array[1..100] of integer;
+  distinctElements: array[1..200] of integer;
+  sumDistinct: integer;
+  i, j, n1, n2, distinctCount: integer;
+
+   begin
+  distinctCount := 0;
+  sumDistinct := 0;
+// Initialize set1 and set2 with elements
+  { Read the number of elements in set1 and set2 }
+  readln(n1);
+  for i := 1 to n1 do
+    read(set1[i]);
+
+  readln(n2);
+  for i := 1 to n2 do
+    read(set2[i]);
+// Iterate through elements in set1
+  { Calculate the sum of distinct elements }
+  for i := 1 to n1 do
+  begin
+    if not (set1[i] in distinctElements) then
+    begin
+      distinctCount := distinctCount + 1;
+      distinctElements[distinctCount] := set1[i];
+    end;
+    sumDistinct := sumDistinct + set1[i];
+  end;
+// Iterate through elements in set2
+  for i := 1 to n2 do
+  begin
+    if not (set2[i] in distinctElements) then
+    begin
+      distinctCount := distinctCount + 1;
+      distinctElements[distinctCount] := set2[i];
+    end;
+    sumDistinct := sumDistinct + set2[i];
+  end;
+ // Calculate the sum of distinct elements
+  { Output the result }
+  writeln('Sum of distinct elements: ', sumDistinct);
+END

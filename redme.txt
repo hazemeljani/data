@@ -1,0 +1,37 @@
+Problem 1
+ This program aims to find the sum of distinct elements from two sets (arrays) of integers. It accomplishes this as follows:
+
+1. It initializes arrays and variables for storing sets (set1 and set2), distinct elements, the sum of distinct elements (sumDistinct), and counters (distinctCount).
+
+ 2.The program first prompts the user to enter the number of elements in set1 and set2.
+
+3. It then reads the elements of set1 and set2 from the user.
+
+4. To find the sum of distinct elements, the program iterates through both sets. For each element in set1:
+
+ It checks if the element is not already in the distinctElements array.
+ If it's not in the array, it adds the element to the distinctElements array and increments the distinctCount.
+ It also adds the element to the sumDistinct.
+ The program repeats the same process for set2.
+
+ Finally, it outputs the result, which is the sum of distinct elements from both sets.
+
+
+
+
+
+
+
+   Problem 2 
+ 1.It defines a function called DotProduct that calculates the dot product of two vectors. The dot product is the sum of the products of corresponding elements of the vectors.
+
+2. The program reads the number of vector pairs (n) from the user.
+
+3. For each pair of vectors, it does the following:
+
+ It reads the elements of vector v1 and v2 from the user.
+ It calculates the dot product of v1 and v2 using the DotProduct function.
+ It checks if the dot product equals zero. If it does, the program concludes that the vectors are orthogonal (perpendicular); otherwise, they are not orthogonal.
+4. The program outputs whether the vectors in each pair are orthogonal or not based on the dot product calculations.
+
+ In summary, the first program computes the sum of distinct elements from two sets of integers, and the second program checks whether pairs of vectors are orthogonal using the dot product. Both programs use arrays and user input to perform their respective tasks.

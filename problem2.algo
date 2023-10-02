@@ -1,0 +1,39 @@
+ALGORITHM algorithm procedur
+ type
+  Vector = array[1..100] of real;
+VAR
+    s  n, i: integer;
+  v1, v2: Vector;et_declarations
+  function DotProduct(v1, v2: Vector; n: integer): real;
+ var
+  result: real;
+BEGIN
+// Initialize victors 
+ result := 0;
+  for i := 1 to n do
+    result := result + (v1[i] * v2[i]);
+  DotProduct := result;
+ end;
+ begin
+ // Iterate through all pairs of vectors
+  { Read the number of vector pairs }
+  readln(n);
+
+  for i := 1 to n do
+  begin
+    { Read the elements of vector v1 }
+    for j := 1 to n do
+      read(v1[j]);
+
+    { Read the elements of vector v2 }
+    for j := 1 to n do
+      read(v2[j]);
+
+    { Calculate the dot product }
+    if DotProduct(v1, v2, n) = 0 then
+      writeln('Vectors are orthogonal.')
+    else
+      writeln('Vectors are not orthogonal.');
+  end;
+    set_instructions
+END
